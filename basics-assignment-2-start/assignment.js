@@ -1,16 +1,26 @@
 const task3Element = document.getElementById('task-3');
 
 
-function Hey  (){
-        return alert("I'm cool")
+    function Hey(){
+        alert("Hey James")
     }
-    
-    Hey()
-    
-    function ItsMe(name){
-        alert(name)
-    }
-    
-    ItsMe("James")
 
-    task3Element.addEventListener('click', Hey)
+    
+    function greeting(name){
+        alert(`Hi ${name}`)
+    }
+
+    Hey();
+    greeting('James');
+
+    task3Element.addEventListener('click', Hey);
+
+    function madLib(verb, noun, adjective){
+        alert(`The ${noun} ate a ${adjective} bug and Becky ${verb} when she saw`)
+    }
+
+    madLib('screamed', 'dog', 'purple');
+    
+   
+
+
