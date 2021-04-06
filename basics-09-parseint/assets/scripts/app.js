@@ -1,63 +1,53 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
 
+// get input from input field
 function getUserInputNumber () {
   return +userInput.value;
 }
-// added this function to extract info from userInput and keep code DRY
 
+
+// generates and writes calculation log
 function createAndWriteOutput(operator, resultBeforeCal, calcNumber) {
   const calcDescription = `${resultBeforeCal} ${operator} ${calcNumber}`;
-  outputResult(currentResult, calcDescription);
+  outputResult(currentResult, calcDescription); // from vendor file
 }
-
-// DRYing out 'outPutResult' at the end of each function
 
 function add() {
   const enteredNumber = getUserInputNumber();
   const initialResult = currentResult;
   currentResult = currentResult + enteredNumber;
-  // this is what's actually doing the math
+  // what's actually doing the math
   createAndWriteOutput('+', initialResult, enteredNumber);
     // just building the string
 }
-// refactored this to make variables DRY
 
 function subtract () {
   const enteredNumber = getUserInputNumber();
   const initialResult = currentResult;
   currentResult = currentResult - enteredNumber;
-  // this is what's actually doing the math
   createAndWriteOutput('-', initialResult, enteredNumber);
 }
 
-
-// new function - copied add() and refactored
 
 function multiply () {
   const enteredNumber = getUserInputNumber();
   const initialResult = currentResult;
   currentResult = currentResult * enteredNumber;
-  // this is what's actually doing the math
   createAndWriteOutput('*', initialResult, enteredNumber);
-    // just building the string
 }
 
-// new function 
 
 function divide () {
   const enteredNumber = getUserInputNumber();
   const initialResult = currentResult;
   currentResult = currentResult / enteredNumber;
-  // this is what's actually doing the math
   createAndWriteOutput('/', initialResult, enteredNumber);
-  // just building the string
 }
-// new function
 
 
 
-addBtn.addEventListener('click', add);
+addBtn.addEventListener('click', add); //all from vendor file
 subtractBtn.addEventListener('click', subtract);
 multiplyBtn.addEventListener('click', multiply);
 divideBtn.addEventListener('click', divide);
