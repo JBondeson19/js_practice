@@ -17,7 +17,9 @@ function add() {
   const enteredNumber = getUserInputNumber();
   const initialResult = currentResult;
   currentResult = currentResult + enteredNumber;
+  // this is what's actually doing the math
   createAndWriteOutput('+', initialResult, enteredNumber);
+    // just building the string
 }
 // refactored this to make variables DRY
 
@@ -25,6 +27,7 @@ function subtract () {
   const enteredNumber = getUserInputNumber();
   const initialResult = currentResult;
   currentResult = currentResult - enteredNumber;
+  // this is what's actually doing the math
   createAndWriteOutput('-', initialResult, enteredNumber);
 }
 
@@ -35,7 +38,9 @@ function multiply () {
   const enteredNumber = getUserInputNumber();
   const initialResult = currentResult;
   currentResult = currentResult * enteredNumber;
+  // this is what's actually doing the math
   createAndWriteOutput('*', initialResult, enteredNumber);
+    // just building the string
 }
 
 // new function 
@@ -44,7 +49,9 @@ function divide () {
   const enteredNumber = getUserInputNumber();
   const initialResult = currentResult;
   currentResult = currentResult / enteredNumber;
+  // this is what's actually doing the math
   createAndWriteOutput('/', initialResult, enteredNumber);
+  // just building the string
 }
 // new function
 
