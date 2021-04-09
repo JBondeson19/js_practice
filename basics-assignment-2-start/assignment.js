@@ -10,7 +10,7 @@ const task3Element = document.getElementById('task-3');
         alert(`Hi ${name}`)
     }
 
-    Hey();
+    Hey;
     greeting('James');
 
     task3Element.addEventListener('click', Hey);
