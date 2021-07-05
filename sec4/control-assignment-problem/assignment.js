@@ -26,10 +26,8 @@ function displayNumbers(){
 function conditionalAlert(randomNumber, newRandomNumber){
     console.log(randomNumber, newRandomNumber);
 
-    if (randomNumber && newRandomNumber > 0.7){
-       alert("It's too big!");
-    } else if (randomNumber || newRandomNumber < 0.2){
-        alert("It's not big enough!");
+    if ((randomNumber > 0.7 && newRandomNumber > 0.7) || randomNumber <= 0.2 || newRandomNumber <=0.2){
+       alert("It's great!");
     }
 }
 
